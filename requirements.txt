@@ -1,0 +1,11 @@
+configparser
+queues
+requests
+urllib3
+requests
+ascii_colors
+fastapi 
+sqlalchemy 
+uvicorn 
+passlib[bcrypt] 
+python-jose[cryptography]

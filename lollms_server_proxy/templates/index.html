@@ -1,0 +1,38 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Web UI of the Future</title>
+</head>
+<body>
+  <h1>Welcome to the Web UI of the Future!</h1>
+  <form action="/user/add" method="post">
+    <label for="username">Username:</label>
+    <input type="text" name="username" id="username" required><br>
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password" required><br>
+    <button type="submit">Add User</button>
+  </form>
+</body>
+</html>
+
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}Web UI of the Future{% endblock %}</title>
+</head>
+<body>
+  {% block content %}{% endblock %}
+</body>
+</html>
+
+<!-- templates/message.html -->
+{% extends "base.html" %}
+
+{% block title %}Message{% endblock %}
+
+{% block content %}
+  <h1>{{ message }}</h1>
+  <a href="/">Back</a>
+{% endblock %}
